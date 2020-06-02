@@ -1,0 +1,8 @@
+tasks:
+  - init: 
+    command: odoo -r gitpot --addons-path=/workspace -d template1 -i invoice -D /workspace/.odoo
+image:
+  file: .gitpod.Dockerfile
+vscode:
+  extensions:
+    - littlefoxteam.vscode-python-test-adapter@0.3.16:tZ/6xOSSdKUaq6JCUVkD+A==`
