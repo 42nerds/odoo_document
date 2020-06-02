@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "odoo_documents",
+    'name': "odoo_document",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -25,6 +25,7 @@
     # always loaded
     'data': [
         'report/din5008_report.xml',
+        'data/report_layout.xml',
     ],
     # only loaded in demonstration mode
     # 'demo': [
