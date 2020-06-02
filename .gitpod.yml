@@ -1,5 +1,5 @@
 tasks:
-  - init: 
+  - init: echo "Bla"
     command: odoo -r gitpot --addons-path=/workspace -d template1 -i invoice -D /workspace/.odoo
 image:
   file: .gitpod.Dockerfile
