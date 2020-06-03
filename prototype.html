@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link href="static/fonts/lato.css" rel="stylesheet">
+        <link href="static/fonts/source-sans-variable.css" rel="stylesheet">
+       
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            *, *::after, *::before {
+                box-sizing: border-box;
+            }
+
+            html {
+                font-size: 14px;
+                text-rendering: geometricPrecision;
+            }
+    
+            body {
+                font-family: "Source Sans Variable";
+                font-feature-settings: "ss02";
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            footer {
+                margin-top: 40px;
+                padding: 40px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            header {
+                padding: 40px;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td {
+                padding: 4px 10px;
+                vertical-align: top;
+                text-align: right;
+            }
+
+            td:first-child,
+            th:first-child {
+                padding-left: 0;
+                text-align: left;
+                width: 100%;
+            }
+
+            td:last-child,
+            th:last-child {
+                padding-right: 0;
+            }
+
+            th {
+                border-style: solid;
+                border-width: 1px 0;
+                font-weight: 600;
+                padding: 4px 10px;
+                text-align: right;
+                white-space: nowrap;
+            }
+
+            .color--primary {
+                color: #4A148C;
+            }
+
+            .content {
+                padding: 0 40px;
+            }
+
+            .flex {
+                display: flex;
+            }
+
+            .flex--c-fe {
+                align-items: center;
+                justify-content: flex-end;
+            }
+
+            .flex--c-sb {
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .flex--fs-sb {
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+
+            .font-weight--semibold {
+                font-weight: 600;
+            }
+
+            .invoice-row--subtotal td {
+                border-top: 1px solid;
+            }
+
+            .invoice-row--total td:last-child {
+                border-style: solid;
+                border-width: 2px 0;
+            }
+
+            .lh--1 {
+                line-height: 1.1;
+            }
+
+            .theme--subtle {
+                background-color: #EEE;
+                color: #616161;
+                font-size: 12px;
+                font-weight: 350;
+                letter-spacing: .2px;
+            }
+    
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="flex">
+                <img src="https://www.42nerds.com/web/image/website/1/logo/42%20N.E.R.D.S.?unique=494c48e" height="64" style="margin-left: auto" />
+            </div>
+        </header>
+
+        <section class="content">
+            <div style="color: #616161">
+                <span class="color--primary font-weight--semibold">42 N.E.R.D.S.</span>｜Oldenstädter Straße 74A｜29525 Uelzen
+            </div>
+
+            <div class="lh-1" style="margin-top: 20px">
+                <h3 class="font-weight--semibold" style="line-height: 1">Helsingin kaupunki</h3>
+                Pormestari Jan Vapaavuori<br>
+                Pohjoisesplanadi 11-13<br>
+                00170 Helsinki<br>
+                Finnland
+            </div>
+
+            <div class="flex flex--c-fe" style="margin: 40px 0">
+                <div class="lh--1" style="margin-right: 40px">
+                    <p class="font-weight--semibold">Kundennummer</p>
+                    0201256-6
+                </div>
+                <div class="lh--1" style="margin-right: 40px">
+                    <p class="font-weight--semibold">Liefer-/Leistungsdatum</p>
+                    03.06.2020
+                </div>
+                <div class="lh--1">
+                    <p class="font-weight--semibold">Rechnungsdatum</p>
+                    03.06.2020
+                </div>
+            </div>
+
+            <h1>Rechnung Nr. 142-081569-A</h1>
+
+            <table style="margin-top: 40px">
+                <thead>
+                    <tr>
+                        <th>Bezeichnung</th>
+                        <th>Menge</th>
+                        <th>Preis pro Einheit (€)</th>
+                        <th>Gesamtpreis (€)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p class="font-weight--semibold">Volkswagen Currywurst</p>
+                            5 Stck. à 170g/Pkg.<br>
+                            Artikel-Nr.: 199 398 500 A
+                        </td>
+                        <td>2,000</td>
+                        <td>8,49</td>
+                        <td>16,98</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p class="font-weight--semibold">Volkswagen Gewürzketchup</p>
+                            1 Fl. à 500ml<br>
+                            Artikel-Nr.: 199 398 500 B
+                        </td>
+                        <td>2,000</td>
+                        <td>4,82</td>
+                        <td>9,64</td>
+                    </tr>
+                    <tr class="invoice-row--subtotal">
+                        <td colspan="2"></td>
+                        <td colspan="2">
+                            <div class="flex flex--c-sb">
+                                <p class="font-weight--semibold">Zwischensumme</p>
+                                <p>26,62 €</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td colspan="2">
+                            <div class="flex flex--c-sb">
+                                <p>zzgl. 19% Ust.</p>
+                                <p>5,06 €</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="invoice-row--total">
+                        <td colspan="2"></td>
+                        <td colspan="2">
+                            <div class="flex flex--c-sb">
+                                <p class="font-weight--semibold">Gesamtsumme</p>
+                                <p>31,68 €</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="font-weight--semibold" style="color: #616161; text-align: center">Seite 1 von 1</p>
+        </section>
+
+        <footer class="theme--subtle">
+            <div class="flex flex--c-sb lh--1">
+                <div>
+                    <p class="font-weight--semibold">Trauringstudio Wolfsburg</p>
+                    Schillerstraße 44<br>
+                    38440 Wolfsburg<br>
+                    Tel. 0 53 61 - 861 261<br>
+                    wob@trauringstudio.de
+                </div>
+                <div>
+                    <p class="font-weight--semibold">Trauringstudio Braunschweig</p>
+                    Langedammstraße 10<br>
+                    38100 Braunschweig<br>
+                    Tel. 0 53 1 - 614 999 38<br>
+                    bs@trauringstudio.de
+                </div>
+                <div>
+                    <p class="font-weight--semibold">Trauringstudio Hildesheim</p>
+                    Scheelenstraße 3<br>
+                    31143 Hildesheim<br>
+                    Tel. 0 51 21 - 999 0 525<br>
+                    hi@trauringstudio.de
+                </div>
+                <div>
+                    <p class="font-weight--semibold">Trauringstudio Celle</p>
+                    Am Heiligen Kreuz 19<br>
+                    29221 Celle<br>
+                    Tel. 0 51 41 - 305 30 86<br>
+                    ce@trauringstudio.de
+                </div>
+                <div>
+                    <p class="font-weight--semibold">Trauringstudio Göttingen</p>
+                    Rote Straße 16<br>
+                    370373 Göttingen<br>
+                    Tel. 0 55 1 - 702 012 80<br>
+                    goe@trauringstudio.de
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
