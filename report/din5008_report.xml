@@ -39,7 +39,7 @@
                     <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" />
                 </header>
 
-                <section class="heading">
+                <div class="heading header">
                     <div class="heading-address">
                         <div class="address--company">
                             <span class="color--primary font-weight--semibold" t-field="company.name" />｜<span t-field="company.street" />｜<span t-field="company.zip" /> <span t-field="company.city" />
@@ -56,15 +56,12 @@
                             <t t-raw="information_block" />
                         </t>
                     </div>
-                </section>
-
-                <article class="page">
-                </article>
-            
-                <t t-raw="0" />
+                </div>
+                
+                <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
+                    <t t-raw="0" />
+                </div>
             </div>
-
-            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"></div>
 
             <div>
                 <div class="footer o_background_footer din">
