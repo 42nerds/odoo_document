@@ -34,12 +34,12 @@
                 <t t-set="company" t-value="res_company" />
             </t>
 
-            <div>
+            <div class="header">
                 <header>
                     <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" />
                 </header>
 
-                <div class="heading header">
+                <div class="heading">
                     <div class="heading-address">
                         <div class="address--company">
                             <span class="color--primary font-weight--semibold" t-field="company.name" />｜<span t-field="company.street" />｜<span t-field="company.zip" /> <span t-field="company.city" />
@@ -57,10 +57,10 @@
                         </t>
                     </div>
                 </div>
+            </div>
                 
-                <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
-                    <t t-raw="0" />
-                </div>
+            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
+                <t t-raw="0" />
             </div>
 
             <div>
