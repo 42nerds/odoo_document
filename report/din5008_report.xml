@@ -63,7 +63,9 @@
             
                 <t t-raw="0" />
             </div>
-            
+
+            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id"></div>
+
             <div>
                 <div class="footer o_background_footer din">
                     <div class="text-right page_number">
