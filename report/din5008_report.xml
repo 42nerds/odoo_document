@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <record id="paperformat_euro" model="report.paperformat">
-            <field name="name">European A4 for DIN</field>
+            <field name="name">DIN A4</field>
             <field name="default" eval="False" />
             <field name="format">A4</field>
             <field name="orientation">Portrait</field>
@@ -16,7 +16,8 @@
 
         <template id="assets_common" name="external_assets_din5008_report" inherit_id="web.report_assets_common">
             <xpath expr="." position="inside">
-                <link rel="stylesheet" type="text/scss" href="/odoo-document/static/src/scss/report_din5008.scss"/>
+                <link href="/odoo-document/static/fonts/source-sans-variable.scss" rel="stylesheet" type="text/scss" />
+                <link href="/odoo-document/static/src/scss/report_din5008.scss" rel="stylesheet" type="text/scss" />
             </xpath>
         </template>
 
@@ -32,6 +33,33 @@
             <t t-if="not doc or not 'company_id' in doc">
                 <t t-set="company" t-value="res_company" />
             </t>
+
+            <div>
+                <header>
+                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" />
+                </header>
+
+                <section class="heading">
+                    <div class="heading-address">
+                        <div class="address--company">
+                            <span class="color--primary font-weight--semibold" t-field="company.name" />｜<span t-field="company.street" />｜<span t-field="company.zip" /> <span t-field="company.city" />
+                        </div>
+
+                        <div class="address--customer">
+                            <h3 class="font-weight--semibold" t-field="o.partner_id.parent_id.name" />
+                            <span t-field="o.partner_id.name" /><br />
+                            <span t-field="o.partner_id.street" /><br />
+                            <span t-field="o.partner_id.zip" /> <span t-field="o.partner_id.city" /><br />
+                            <span t-field="o.partner_id.country" />
+                        </div>
+                    </div>
+
+                    <div class="heading-information"></div>
+                </section>
+
+                <article class="page">
+                </article>
+            </div>
 
             <div>
                 <div class="header din">

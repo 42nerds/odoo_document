@@ -1,0 +1,19 @@
+@font-face{
+    font-family: 'Source Sans Variable';
+    font-weight: 200 900;
+    font-style: normal;
+    font-stretch: normal;
+    src: url('/odoo-document/static/fonts/source-sans-pro/WOFF2/VARIABLE/SourceSansVariable-Roman.ttf.woff2') format('woff2'),
+         url('/odoo-document/static/fonts/source-sans-pro/WOFF/VARIABLE/SourceSansVariable-Roman.ttf.woff') format('woff'),
+         url('/odoo-document/static/fonts/source-sans-pro/VARIABLE/SourceSansVariable-Roman.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: 'Source Sans Variable';
+    font-weight: 200 900;
+    font-style: italic;
+    font-stretch: normal;
+    src: url('/odoo-document/static/fonts/source-sans-pro/WOFF2/VARIABLE/SourceSansVariable-Italic.ttf.woff2') format('woff2'),
+         url('/odoo-document/static/fonts/source-sans-pro/WOFF/VARIABLE/SourceSansVariable-Italic.ttf.woff') format('woff'),
+         url('/odoo-document/static/fonts/source-sans-pro/VARIABLE/SourceSansVariable-Italic.ttf') format('truetype');
+}
