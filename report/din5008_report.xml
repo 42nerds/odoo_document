@@ -48,56 +48,23 @@
                         <div class="address--customer">
                             <span class="font-weight--semibold" t-field="o.partner_id.parent_id.name" />
                             <div t-field="o.partner_id" t-options="{ 'widget': 'contact', 'fields': ['address'], 'no_marker': true }" />
-
-                            <!-- <span t-field="o.partner_id.name" /><br />
-                            <span t-field="o.partner_id.street" /><br />
-                            <span t-field="o.partner_id.zip" /> <span t-field="o.partner_id.city" /><br />
-                            <span t-field="o.partner_id.country_id.name" /> -->
                         </div>
                     </div>
 
-                    <div class="heading-information"></div>
+                    <div class="heading-information">
+                        <t t-if="information_block">
+                            <t t-raw="information_block" />
+                        </t>
+                    </div>
                 </section>
 
                 <article class="page">
                 </article>
+            
+                <t t-raw="0" />
             </div>
-
+            
             <div>
-                <div class="header din">
-                    <div class="float-right">
-                        <h3 class="mt0 text-right" t-field="company.report_header"/>
-                    </div>
-                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" class="float-left"/>
-                </div>
-
-                <div class="article din" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
-                    <div class="header_address">
-                        <t t-if="address">
-                            <div name="invoice_address" class="invoice_address">
-                                <t t-raw="address"/>
-                            </div>
-                        </t>
-                        <t t-else="fallback_address">
-                            <div name="invoice_address" class="invoice_address" t-raw="fallback_address" t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True}' />
-                        </t>
-                        <div class="company_address">
-                            <div>
-                                <strong t-field="company.partner_id.name"/>
-                            </div>
-                            <span t-field="company.partner_id"
-                                t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
-                            <t t-if="information_block">
-                                <div class="address">
-                                    <t t-raw="information_block"/>
-                                </div>
-                            </t>
-                        </div>
-                    </div>
-                    
-                    <t t-raw="0" />
-                </div>
-
                 <div class="footer o_background_footer din">
                     <div class="text-right page_number">
                         <div class="text-muted">
