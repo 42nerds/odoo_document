@@ -16,7 +16,7 @@
 
         <template id="assets_common" name="external_assets_din5008_report" inherit_id="web.report_assets_common">
             <xpath expr="." position="inside">
-                <link href="/odoo-document/static/fonts/source-sans-variable.scss" rel="stylesheet" type="text/scss" />
+                <link href="/odoo-document/static/fonts/source-sans-pro.scss" rel="stylesheet" type="text/scss" />
                 <link href="/odoo-document/static/src/scss/report_din5008.scss" rel="stylesheet" type="text/scss" />
             </xpath>
         </template>
@@ -38,7 +38,9 @@
                 <header>
                     <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" />
                 </header>
-
+            </div>
+                
+            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
                 <div class="heading">
                     <div class="heading-address">
                         <div class="address--company">
@@ -57,9 +59,7 @@
                         </t>
                     </div>
                 </div>
-            </div>
-                
-            <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id">
+
                 <t t-raw="0" />
             </div>
 

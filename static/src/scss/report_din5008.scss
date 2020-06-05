@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-family: "Source Sans Variable";
+    font-family: "Source Sans Pro";
     font-feature-settings: "ss02";
     font-size: 1rem;
     line-height: 1.5;
@@ -23,7 +23,6 @@ header {
     align-items: center;
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 5mm;
     max-height: 45mm;
     min-height: 45mm;
     overflow: hidden;
@@ -52,6 +51,7 @@ header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 8.46mm;
+    margin-top: 5mm;
     padding: 0 10mm 0 25mm;
 
     &-address {
