@@ -19,6 +19,41 @@ body {
     line-height: 1.5;
 }
 
+dd {
+    text-align: right;
+}
+
+dd:last-of-type
+dl,
+dt:last-of-type {
+    margin-bottom: 0;
+}
+
+dt {
+    clear: left;
+    float: left;
+    font-weight: 600;
+    margin-bottom: .5em;
+}
+
+footer {
+    color: #616161;
+    font-size: 10px;
+    height: 28mm;
+    max-height: 28mm;
+    overflow: hidden;
+    padding: 10px (20mm - 5px) 0 (25mm - 5px);
+
+    .row {
+        margin: 0 -10px;
+    }
+
+    .col,
+    [class^=col-] {
+        padding: 0 10px;
+    }
+}
+
 header {
     align-items: center;
     display: flex;
@@ -43,6 +78,30 @@ header {
     color: #4A148C;
 }
 
+.df {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+        margin-bottom: .5em;
+    }
+
+    span:first-child:not(:only-child) {
+        font-weight: 600;
+    }
+
+    span:last-child {
+        flex-grow: 1;
+        text-align: right;
+    }
+
+    span:only-child {
+        text-align: left;
+    }
+}
+
 .font-weight--semibold {
     font-weight: 600;
 }
@@ -65,15 +124,33 @@ header {
     }
 }
 
-.page {
+.lh--1 {
+    line-height: 1.1;
+}
+
+/* Needs explicit article mention, because span.page is a blocked selector by wkhtmltopdf and shouldn't get these styles */
+article.page {
     padding: 0 20mm 0 25mm;
 }
 
 .page-number {
+    color: #616161;
+    font-weight: 600;
     margin: 4.23mm 0;
     padding-right: 20mm;
     text-align: right;
 }
+
+.theme--subtle {
+    background-color: #EEE;
+    color: #616161;
+    font-size: 12px;
+    font-weight: 350;
+    letter-spacing: .2px;
+}
+
+
+
 
 .din {
     .company_address {

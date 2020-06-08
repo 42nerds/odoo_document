@@ -44,7 +44,8 @@
                 <div class="heading">
                     <div class="heading-address">
                         <div class="address--company">
-                            <span class="color--primary font-weight--semibold" t-field="company.name" />｜<span t-field="company.street" />｜<span t-field="company.zip" /> <span t-field="company.city" />
+                            <!-- Better character that doesn't work in print tho: ｜ -->
+                            <span class="color--primary font-weight--semibold" t-field="company.name" /> | <span t-field="company.street" /> | <span t-field="company.zip" /> <span t-field="company.city" />
                         </div>
 
                         <div class="address--customer">
@@ -60,29 +61,66 @@
                     </div>
                 </div>
 
-                <t t-raw="0" />
+                <article class="page">
+                    <t t-raw="0" />
+                </article>
             </div>
 
-            <div>
-                <div class="footer o_background_footer din">
-                    <div class="text-right page_number">
-                        <div class="text-muted">
-                            Page:
-                            <span class="page"/>
-                            of
-                            <span class="topage"/>
+            <div class="footer o_background_footer">
+                <div class="page-number">
+                    Seite <span class="page" /> von <span class="topage" />
+                </div>
+
+                <footer>
+                    <div class="row lh--1">
+                        <div class="col-3">
+                            <span class="color--primary font-weight--semibold" style="font-size: 14px" t-field="company.name" /><br />
+                            <br />
+                            <span t-field="company.street" /><br />
+                            <span t-field="company.zip" /> <span t-field="company.city" />
+                        </div>
+                        <div class="col-3">
+                            <dl>
+                                <dt>Telefon</dt>
+                                <dd><span t-field="company.phone" /></dd>
+                                <dt>Fax</dt>
+                                <dd><span t-field="company.phone" /></dd>
+                                <dt>E-Mail</dt>
+                                <dd><span t-field="company.email" /></dd>
+                            </dl>
+                        </div>
+                        <div class="col-3">
+                            <dl>
+                                <dt>Volksbank Uelzen-Salzwedel eG</dt>
+                                <dd><span>&#160;</span></dd>
+                                <dt>BIC</dt>
+                                <dd>GENODEF1EUB</dd>
+                                <dt>IBAN</dt>
+                                <dd>DE35 2586 2292 0706 2486 00</dd>
+                            </dl>
+                        </div>
+                        <div class="col-3">
+                            <dl>
+                                <dt>St.-Nr.</dt>
+                                <dd>47/121/00868</dd>
+                                <dt>USt-IdNr.</dt>
+                                <dd>DE293688355</dd>
+                                <dt style="font-weight: 400"><span t-field="company.website" /></dt>
+                                <dd><span>&#160;</span></dd>
+                            </dl>
                         </div>
                     </div>
-                    <div class="text-center">
-                        <ul class="list-inline">
-                            <li t-if="company.phone"><i class="fa fa-phone"/> <span t-field="company.phone"/></li>
-                            <li t-if="company.email"><i class="fa fa-at"/> <span t-field="company.email"/></li>
-                            <li t-if="company.website"><i class="fa fa-globe"/> <span t-field="company.website"/></li>
-                            <li t-if="company.vat"><i class="fa fa-building-o"/><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
-                        </ul>
-                        <div t-field="company.report_footer"/>
-                    </div>
-                </div>
+                </footer>
+
+                <!-- <div class="text-center">
+                    <ul class="list-inline">
+                        <li t-if="company.phone"><i class="fa fa-phone"/> <span t-field="company.phone"/></li>
+                        <li t-if="company.email"><i class="fa fa-at"/> <span t-field="company.email"/></li>
+                        <li t-if="company.website"><i class="fa fa-globe"/> <span t-field="company.website"/></li>
+                        <li t-if="company.vat"><i class="fa fa-building-o"/><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
+                    </ul>
+                    <div t-field="company.report_footer"/>
+                </div> -->
             </div>
         </template>
     </data>
