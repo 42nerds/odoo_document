@@ -83,28 +83,36 @@
                             <dl>
                                 <dt>Telefon</dt>
                                 <dd><span t-field="company.phone" /></dd>
-                                <dt>Fax</dt>
-                                <dd><span t-field="company.phone" /></dd>
+
+                                <t t-if="company.fax">
+                                    <dt>Fax</dt>
+                                    <dd><span t-field="company.fax" /></dd>
+                                </t>
+
                                 <dt>E-Mail</dt>
                                 <dd><span t-field="company.email" /></dd>
                             </dl>
                         </div>
-                        <div class="col-3">
+                        <div t-if="company.bank_ids[0]" class="col-3">
                             <dl>
-                                <dt>Volksbank Uelzen-Salzwedel eG</dt>
+                                <dt><span t-field="company.bank_ids[-1].bank_id.name" /></dt>
                                 <dd><span>&#160;</span></dd>
                                 <dt>BIC</dt>
-                                <dd>GENODEF1EUB</dd>
+                                <dd><span t-field="company.bank_ids[-1].bank_id.bic" /></dd>
                                 <dt>IBAN</dt>
-                                <dd>DE35 2586 2292 0706 2486 00</dd>
+                                <dd><span t-field="company.bank_ids[-1].acc_number" /></dd>
                             </dl>
                         </div>
                         <div class="col-3">
                             <dl>
                                 <dt>St.-Nr.</dt>
-                                <dd>47/121/00868</dd>
-                                <dt>USt-IdNr.</dt>
-                                <dd>DE293688355</dd>
+                                <dd><span t-field="company.vat" /></dd>
+                                
+                                <t t-if="company.vat_eu">
+                                    <dt>USt-IdNr.</dt>
+                                    <dd><span t-field="company.vat_eu" /></dd>
+                                </t>
+                                
                                 <dt style="font-weight: 400"><span t-field="company.website" /></dt>
                                 <dd><span>&#160;</span></dd>
                             </dl>
