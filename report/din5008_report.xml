@@ -93,7 +93,7 @@
                                 <dd><span t-field="company.email" /></dd>
                             </dl>
                         </div>
-                        <div t-if="company.bank_ids[0]" class="col-3">
+                        <div t-if="len(company.bank_ids) > 0" class="col-3">
                             <dl>
                                 <dt><span t-field="company.bank_ids[-1].bank_id.name" /></dt>
                                 <dd><span>&#160;</span></dd>
