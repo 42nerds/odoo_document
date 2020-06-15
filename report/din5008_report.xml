@@ -67,7 +67,7 @@
             </div>
 
             <div class="footer o_background_footer">
-                <div class="page-number">
+                <div t-if="report_type == 'pdf'" class="page-number">
                     Seite <span class="page" /> von <span class="topage" />
                 </div>
 
