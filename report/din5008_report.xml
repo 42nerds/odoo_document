@@ -105,8 +105,10 @@
                         </div>
                         <div class="col-3">
                             <dl>
-                                <dt>St.-Nr.</dt>
-                                <dd><span t-field="company.vat" /></dd>
+                                <t t-if="company.vat is True">
+                                    <dt>St.-Nr.</dt>
+                                    <dd><span t-field="company.vat" /></dd>
+                                </t>
 
                                 <t t-if="'vat_eu' in company.fields_get()">
                                     <dt>USt-IdNr.</dt>
