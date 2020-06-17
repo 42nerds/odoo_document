@@ -5,7 +5,7 @@
             <field name="view_id" ref="odoo_document.external_layout_din5008"/>
             <!-- <field name="image">/l10n_de/static/img/preview_din.png</field>
             <field name="pdf">/l10n_de/static/pdf/preview_din.pdf</field> -->
-            <field name="name">42 N.E.R.D.S. Layout (DIN 5008)</field>
+            <field name="name">42NERDS</field>
         </record>
     </data>
 </odoo>
