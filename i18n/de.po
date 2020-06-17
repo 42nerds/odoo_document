@@ -1,0 +1,29 @@
+#. module: odoo_document
+#: model:ir.model.fields,field_description:odoo_document.field_res_company__ceos
+msgid "CEOs"
+msgstr "Geschäftsführer"
+
+#. module: odoo_document
+#: model:ir.model.fields,field_description:odoo_document.field_res_company__company_registry_id
+msgid "Company Registration ID"
+msgstr "Registernummer"
+
+#. module: odoo_document
+#: model:ir.model.fields,field_description:odoo_document.field_res_company__corporation_location
+msgid "Location of Corporation"
+msgstr "Sitz der Gesellschaft"
+
+#. module: odoo_document
+#: model:ir.model.fields,field_description:odoo_document.field_res_company__fax
+msgid "Fax"
+msgstr "Fax"
+
+#. module: odoo_document
+#: model:ir.model.fields,field_description:odoo_document.field_res_company__in_liquidation
+msgid "In Liquidation"
+msgstr "In Liquidation"
+
+#. module: odoo_document
+#: model:ir.model.fields,field_description:odoo_document.field_res_company__vat_national
+msgid "National Tax ID"
+msgstr "Steuernummer"

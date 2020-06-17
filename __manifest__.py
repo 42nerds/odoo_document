@@ -20,12 +20,13 @@
     'version': '0.0.2',
 
     # any module necessary for this one to work correctly
-    'depends': ['account'],
+    'depends': ['account', 'base'],
 
     # always loaded
     'data': [
         'report/din5008_report.xml',
         'data/report_layout.xml',
+        'views/res_company.xml',
     ],
     # only loaded in demonstration mode
     # 'demo': [
