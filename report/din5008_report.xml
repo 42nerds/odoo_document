@@ -7,7 +7,7 @@
             <field name="format">A4</field>
             <field name="orientation">Portrait</field>
             <field name="margin_top">45</field>
-            <field name="margin_bottom">28</field>
+            <field name="margin_bottom">35</field>
             <field name="margin_left">0</field>
             <field name="margin_right">0</field>
             <field name="header_line" eval="False" />
@@ -74,49 +74,72 @@
                 <footer>
                     <div class="row lh--1">
                         <div class="col-3">
-                            <span class="color--primary font-weight--semibold" style="font-size: 14px" t-field="company.name" /><br />
+                            <span class="color--primary font-weight--semibold" style="font-size: 12px" t-field="company.name" /><br />
                             <br />
                             <span t-field="company.street" /><br />
                             <span t-field="company.zip" /> <span t-field="company.city" />
+
+                            <t t-if="company.corporation_location">
+                                <p><br /><span t-field="company.corporation_location" /> (Location of Corporation)</p>
+                            </t>
                         </div>
                         <div class="col-3">
                             <dl>
                                 <dt>Tel</dt>
                                 <dd><span t-field="company.phone" /></dd>
 
-                                <t t-if="'fax' in company.fields_get()">
+                                <t t-if="company.fax">
                                     <dt>Fax</dt>
                                     <dd><span t-field="company.fax" /></dd>
                                 </t>
 
                                 <dt>Email</dt>
                                 <dd><span t-field="company.email" /></dd>
-                            </dl>
-                        </div>
-                        <div t-if="len(company.bank_ids) > 0" class="col-3">
-                            <dl>
-                                <dt><span t-field="company.bank_ids[-1].bank_id.name" /></dt>
-                                <dd><span>&#160;</span></dd>
-                                <dt>BIC</dt>
-                                <dd><span t-field="company.bank_ids[-1].bank_id.bic" /></dd>
-                                <dt>IBAN</dt>
-                                <dd><span t-field="company.bank_ids[-1].acc_number" /></dd>
+
+                                <dt>Web</dt>
+                                <dd><span t-field="company.website" /></dd>
                             </dl>
                         </div>
                         <div class="col-3">
                             <dl>
-                                <t t-if="company.vat is True">
-                                    <dt>National VAT Reg No</dt>
-                                    <dd><span t-field="company.vat" /></dd>
+                                <t t-if="len(company.bank_ids) > 0">
+                                    <dt><span t-field="company.bank_ids[-1].bank_id.name" /></dt>
+                                    <dd><span>&#160;</span></dd>
+                                    <dt>BIC</dt>
+                                    <dd><span t-field="company.bank_ids[-1].bank_id.bic" /></dd>
+                                    <dt>IBAN</dt>
+                                    <dd><span t-field="company.bank_ids[-1].acc_number" /></dd>
                                 </t>
 
-                                <t t-if="'vat_eu' in company.fields_get()">
-                                    <dt>VAT Reg No</dt>
-                                    <dd><span t-field="company.vat_eu" /></dd>
+                                <t t-if="company.vat_national">
+                                    <dt>National VAT Reg No</dt>
+                                    <dd><span t-field="company.vat_national" /></dd>
                                 </t>
-                                
-                                <dt style="font-weight: 400"><span t-field="company.website" /></dt>
-                                <dd><span>&#160;</span></dd>
+
+                                <t t-if="company.vat">
+                                    <dt>VAT Reg No</dt>
+                                    <dd><span t-field="company.vat" /></dd>
+                                </t>
+                            </dl>
+                        </div>
+                        <div class="col-3">
+                            <dl>
+                                <t t-if="company.company_registry">
+                                    <!-- <dt>Company Reg</dt>
+                                    <dd><span t-field="company.company_registry" /></dd> -->
+                                    <dt><span t-field="company.company_registry" /></dt>
+                                    <dd><span>&#160;</span></dd>
+                                </t>
+
+                                <t t-if="company.company_registry_id">
+                                    <dt>Company Reg No</dt>
+                                    <dd><span t-field="company.company_registry_id" /></dd>
+                                </t>
+
+                                <t t-if="company.ceos">
+                                    <dt>CEOs</dt>
+                                    <dd><span t-field="company.ceos" /></dd>
+                                </t>
                             </dl>
                         </div>
                     </div>
