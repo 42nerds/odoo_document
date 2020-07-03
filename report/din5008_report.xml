@@ -15,7 +15,7 @@
         </record>
 
         <template id="assets_common" name="external_assets_din5008_report" inherit_id="web.report_assets_common">
-            <xpath expr="//link[@href='/web/static/src/scss/asset_styles_company_report.scss']" position="after">
+            <xpath expr="link[last()]" position="after">
                 <!-- <link href="/odoo_document/static/fonts/source-sans-pro.scss" rel="stylesheet" type="text/scss" /> -->
                 <link href="/odoo_document/static/src/scss/report_din5008.scss" rel="stylesheet" type="text/scss" />
             </xpath>
