@@ -20,6 +20,7 @@
 
     'data': [
         'report/din5008_report.xml',
+        'report/report_stockpicking_operations.xml',
         'data/report_layout.xml',
         'views/res_company.xml',
     ],

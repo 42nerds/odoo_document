@@ -21,6 +21,11 @@ msgid "(Location of Corporation)"
 msgstr "(Sitz der Gesellschaft)"
 
 #. module: odoo_document
+#: model_terms:ir.ui.view,arch_db:odoo_document.report_delivery_document
+msgid "<span>Delivery note </span>"
+msgstr "<span>Lieferschein </span>"
+
+#. module: odoo_document
 #: model_terms:ir.ui.view,arch_db:odoo_document.external_layout_din5008
 msgid "BIC"
 msgstr "BIC"
