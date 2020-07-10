@@ -49,8 +49,7 @@
                         </div>
 
                         <div class="address--customer">
-                            <span t-if="o.partner_id.parent_id.name" t-field="o.partner_id.parent_id.name" class="font-weight--semibold" />
-                            <span t-elif="o.partner_id.title" t-field="o.partner_id.title.shortcut" class="font-weight--semibold" />
+                            <span t-if="o.partner_id.parent_id and o.partner_id.parent_id.name" t-field="o.partner_id.parent_id.name" class="font-weight--semibold" />
                             <span t-elif="o.partner_id.name" t-field="o.partner_id.name" class="font-weight--semibold" />
 
                             <div t-field="o.partner_id" t-options="{ 'widget': 'contact', 'fields': ['address'], 'no_marker': true }" />
