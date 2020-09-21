@@ -18,6 +18,18 @@
                 <field name="corporation_location" />
             </xpath>
 
+            <xpath expr="//field[@name='corporation_location']" position="after">
+                <field name="bank_name" />
+            </xpath>
+
+            <xpath expr="//field[@name='bank_name']" position="after">
+                <field name="bank_bic" />
+            </xpath>
+
+            <xpath expr="//field[@name='bank_bic']" position="after">
+                <field name="bank_acc_number" />
+            </xpath>
+
             <xpath expr="//field[@name='currency_id']" position="before">
                 <field name="in_liquidation" />
             </xpath>
