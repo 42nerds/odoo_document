@@ -69,6 +69,11 @@ msgid "Location of Corporation"
 msgstr "Sitz der Gesellschaft"
 
 #. module: odoo_document
+#: model:ir.model.fields,field_description:odoo_document.field_res_company__bank_name
+msgid "Name of the bank"
+msgstr "Name der Bank"
+
+#. module: odoo_document
 #: model:ir.model.fields,field_description:odoo_document.field_res_company__vat_national
 msgid "National Tax ID"
 msgstr "Steuernummer"
