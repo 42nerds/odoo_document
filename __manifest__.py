@@ -16,7 +16,7 @@
     'category': 'Sales',
     'version': '0.0.2',
 
-    'depends': ['account', 'base'],
+    'depends': ['account', 'base', 'stock'],
 
     'data': [
         'report/din5008_report.xml',
