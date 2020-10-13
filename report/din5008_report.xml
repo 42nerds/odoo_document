@@ -105,12 +105,12 @@
                         <div class="col-3">
                             <dl>
                                 <t t-if="len(company.bank_ids) > 0">
-                                    <dt><span t-field="company.bank_ids[0].bank_id.name" /></dt>
+                                    <dt><span t-field="company.bank_name" /></dt>
                                     <dd><span>&#160;</span></dd>
                                     <dt>BIC</dt>
-                                    <dd><span t-field="company.bank_ids[0].bank_id.bic" /></dd>
+                                    <dd><span t-field="company.bank_bic" /></dd>
                                     <dt>IBAN</dt>
-                                    <dd><span t-field="company.bank_ids[0].acc_number" /></dd>
+                                    <dd><span t-field="company.bank_acc_number" /></dd>
                                 </t>
 
                                 <t t-if="company.vat_national">
