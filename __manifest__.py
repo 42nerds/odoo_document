@@ -16,11 +16,10 @@
     'category': 'Sales',
     'version': '0.0.2',
 
-    'depends': ['account', 'base', 'stock'],
+    'depends': ['account', 'base'],
 
     'data': [
         'report/din5008_report.xml',
-        'report/report_stockpicking_operations.xml',
         'data/report_layout.xml',
         'views/res_company.xml',
     ],
