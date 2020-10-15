@@ -41,7 +41,7 @@
             </div>
                 
             <div class="article" t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
-                <div class="heading">
+                <div t-attf-class="heading {{ 'pdf' if report_type == 'pdf' else '' }}">
                     <div class="heading-address">
                         <div class="address--company">
                             <!-- Better character that doesn't work in print tho: ｜ -->
@@ -63,7 +63,7 @@
                     </div>
                 </div>
 
-                <article class="page">
+                <article t-attf-class="page {{ 'pdf' if report_type == 'pdf' else '' }}">
                     <t t-raw="0" />
                 </article>
             </div>
@@ -73,7 +73,7 @@
                     Page <span class="page" /> of <span class="topage" />
                 </div>
 
-                <footer>
+                <footer t-attf-class="{{ 'pdf' if report_type == 'pdf' else '' }}">
                     <div class="row lh--1">
                         <div class="col-3">
                             <span class="color--primary font-weight--semibold" style="font-size: 12px" t-field="company.name" /><br />
