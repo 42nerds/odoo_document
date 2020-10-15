@@ -42,12 +42,13 @@ footer {
     height: 35mm;
     max-height: 35mm;
     overflow: hidden;
-    padding: 10px (20mm - 5px) 0 25mm;
 
     .row {
         margin: 0 -10px;
     }
-
+    &.pdf {
+        padding: 10px (20mm - 5px) 0 25mm;
+    }
     .col,
     [class^=col-] {
         padding: 0 10px;
@@ -112,7 +113,10 @@ header {
     justify-content: space-between;
     margin-bottom: 8.46mm;
     margin-top: 5mm;
-    padding: 0 10mm 0 25mm;
+
+    &.pdf {
+        padding: 0 10mm 0 25mm;
+    }
 
     &-address {
         height: 45mm;
@@ -124,14 +128,15 @@ header {
         padding-top: 5mm;
     }
 }
-
 .lh--1 {
     line-height: 1.1;
 }
 
 /* Needs explicit article mention, because span.page is a blocked selector by wkhtmltopdf and shouldn't get these styles */
 article.page {
-    padding: 0 20mm 0 25mm;
+    &.pdf {
+        padding: 0 20mm 0 25mm;
+    }
 }
 
 .page-number {
