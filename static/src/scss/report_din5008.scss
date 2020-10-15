@@ -8,14 +8,14 @@
 }
 
 html {
-    font-size: 14px;
+    font-size: 14px !important;
     text-rendering: geometricPrecision;
 }
 
 body {
     // font-family: "Source Sans Pro";
     // font-feature-settings: "ss02";
-    font-size: 1rem;
+    font-size: 1rem !important;
     line-height: 1.5;
 }
 
@@ -38,7 +38,7 @@ dt {
 
 footer {
     color: #616161;
-    font-size: 10px;
+    font-size: 10px !important;
     height: 35mm;
     max-height: 35mm;
     overflow: hidden;
@@ -72,7 +72,7 @@ header {
 
 .address--company {
     color: #616161;
-    font-size: 12px;
+    font-size: 12px !important;
     height: 17.7mm;
 }
 
@@ -150,7 +150,7 @@ article.page {
 .theme--subtle {
     background-color: #EEE;
     color: #616161;
-    font-size: 12px;
+    font-size: 12px !important;
     font-weight: 350;
     letter-spacing: .2px;
 }
